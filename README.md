@@ -19,15 +19,19 @@ To solve the problem, the Variable elimination algorithm is used to compute each
 
 # Enumeration vs Elimination # 
 
-* P3_3_2    
+The elapsed time to solve 3 public problems were taken for both Variable Elimination and Enumeration algorithms, and these were the results
+
+* P3_3_2: 3 rooms, no connections between them and 2 Measures taken   
     Elimination: 0.01096s
 
     Enumeration: 0.11868s
-* P3_1_4    
+* P3_1_4: 3 rooms 1 connection and 4 Measures    
     Elimination: 0.04687s
 
     Enumeration: 7.81533s
-* P5_1_2
+* P5_1_2: 5 rooms 2 connections and 2 Measures
     Elimination: 0.09028s
-    
+
     Enumeration: 11.3393s   
+
+It is evident that the variable elimination algorithm is much more efficient and computationaly cheap than the varaible enumeration algorithm. This is due to the fact that the first one uses the Net's architecture to reduce the number of computed probabilities, where the enumeration algorithm computes all the possible probabilities.
