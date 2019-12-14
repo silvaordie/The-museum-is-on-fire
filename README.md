@@ -20,11 +20,14 @@ To solve the problem, the Variable elimination algorithm is used to compute each
 # Enumeration vs Elimination # 
 
 * P3_3_2    
-    Elimination: 0.010967731475830078
-    Enumeration: 0.1186833381652832
+    Elimination: 0.01096s
+
+    Enumeration: 0.11868s
 * P3_1_4    
-    Elimination: 0.046877145767211914
-    Enumeration: 7.81533670425415
+    Elimination: 0.04687s
+
+    Enumeration: 7.81533s
 * P5_1_2
-    Elimination: 0.09028339385986328
-    Enumeration: 11.33936882019043   
+    Elimination: 0.09028s
+    
+    Enumeration: 11.3393s   
