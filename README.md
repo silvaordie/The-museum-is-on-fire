@@ -10,9 +10,9 @@ Each layer has the correspondent(s) sensor(s) measurement(s) taken in that time 
 The modeled Bayesian Network as a total of N*Nrooms + S nodes, where N is the number of measurements taken, Nrooms is the number of rooms in the museum and S is the number of sensor readings.
 
 The n'th layer of the Bayesian Network contains nodes for each of the museums' rooms, corresponding to the Measurement taken in time instant N, which are child nodes of the rooms in layer N-1 that are physically connected to the room in layer N-1, as well as the node that corresponds to the same room in layer N-1, with the following CPD rules:
-if Obs=All parent rooms and the room in layer N-1 are not on fire : P(N:Ri | Obs) = 0
-if Obs= 1 or more parent rooms are on fire and the room in layer N-1 is not on fire: P(N:Ri | Obs) = P
-if Obs= The room in layer N-1 is on fire: P(N:Ri | Obs) = 1
+* if Obs=All parent rooms and the room in layer N-1 are not on fire : P(N:Ri | Obs) = 0
+* if Obs= 1 or more parent rooms are on fire and the room in layer N-1 is not on fire: P(N:Ri | Obs) = P
+* if Obs= The room in layer N-1 is on fire: P(N:Ri | Obs) = 1
 ( P(N:Ri | Obs)=1 room Ri is on fire in time instant N )
 
 To solve the problem, the Variable elimination algorithm is used to compute each room's probability to be on fire in the last time instant, given the set of sensor readings, i.e P(N:Ri | 0:S1= T/F, ... , N:Sk=T/F) where k is the number of sensors.
