@@ -1,4 +1,4 @@
-# The Museum i sone fire ! #
+# The Museum is one fire ! #
 The modeled Bayesian Network has several layers. Each one of this layers corresponds to a time instant in which a measurement of one or more sensors was taken. From now on the notation n:NAME will be used to reference a net's node where the room or sensor with name NAME that is responsible for generating said node in the time instant n.
 
 The first layer contains the inicial conditions of each room. Since there is no information about them, it is considered that all the rooms have equal probability of being, or not, on fire ( P(0:Ri)=0.5 ).
