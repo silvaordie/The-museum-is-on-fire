@@ -1,4 +1,4 @@
-# The Museum is one fire ! #
+# The Museum is on fire ! #
 The modeled Bayesian Network has several layers. Each one of this layers corresponds to a time instant in which a measurement of one or more sensors was taken. From now on the notation n:NAME will be used to reference a net's node where the room or sensor with name NAME that is responsible for generating said node in the time instant n.
 
 The first layer contains the inicial conditions of each room. Since there is no information about them, it is considered that all the rooms have equal probability of being, or not, on fire ( P(0:Ri)=0.5 ).
@@ -16,4 +16,15 @@ The n'th layer of the Bayesian Network contains nodes for each of the museums' r
 ( P(N:Ri | Obs)=1 room Ri is on fire in time instant N )
 
 To solve the problem, the Variable elimination algorithm is used to compute each room's probability to be on fire in the last time instant, given the set of sensor readings, i.e P(N:Ri | 0:S1= T/F, ... , N:Sk=T/F) where k is the number of sensors.
- 
+
+# Enumeration vs Elimination # 
+
+* P3_3_2    
+    Elimination: 0.010967731475830078
+    Enumeration: 0.1186833381652832
+* P3_1_4    
+    Elimination: 0.046877145767211914
+    Enumeration: 7.81533670425415
+* P5_1_2
+    Elimination: 0.09028339385986328
+    Enumeration: 11.33936882019043   
