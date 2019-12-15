@@ -34,4 +34,4 @@ The elapsed time to solve 3 public problems were taken for both Variable Elimina
 
     Enumeration: 11.3393s   
 
-It is evident that the variable elimination algorithm is much more efficient and computationaly cheap than the varaible enumeration algorithm. This is due to the fact that the first one uses the Net's architecture to reduce the number of computed probabilities, where the enumeration algorithm computes all the possible probabilities.
+It is evident that the variable elimination algorithm is much more efficient and computationaly cheap than the varaible enumeration algorithm. This is due to the fact that the first one uses the Net's architecture, storing intermediate results (factors) to avoid repetition, reducing the number of computed probabilities, where the enumeration algorithm enumerates all the possible probabilities (just like building a tree), including repeated ones.
