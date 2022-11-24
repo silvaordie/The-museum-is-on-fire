@@ -1,4 +1,15 @@
 # The Museum is on fire ! #
+In September 2nd of 2018 a huge fire consumed more than 93% of the National Museum of Brasil collection, built over a period of two centuries. It is believed that the bad condition of the electrical system was the major cause of this tragic event. Moreover, there were plans to reform the fire prevention system, which were not implemented in due time.
+This mini-project addresses the problem of fire detection in a museum, taking into account a simple fire propagation model and the uncertainty associated with the fire detectors spread over the building.
+The problem is formulated as follows. Let the museum building be modeled by an undirected graph, where the nodes are the rooms, R = {r1, . . . , rN }, and the edges are the doors/stars connecting adjacent rooms, C = {(ri , rj ), . . .} where ri, rj ∈ R. Some of these rooms are equipped with sensors, S = {s1, . . . , sM}, M ≤ N, where the map l : S → R specifies the room covered by each sensor. Each one of these sensors is characterized by two parameters:
+TPR — True Positive Rate, also known as hit rate or recall, is the probability of detecting a fire in case of a real fire, and
+FPR — False Positive Rate, also known as false alarm rate, is the probability of detecting a fire in case of no fire.
+Consider a set of discrete time steps, T = {1, . . . , T}, where for each time step, the output of only a subset of the sensors is known (e.g., due to poor sensor network). Moreover, we consider the following fire propagation law:
+if room ri ∈ R is on fire at time step t, it will continue on fire at t + 1;
+or else , it will catch fire with probability P at time step t + 1 when any of the adjacent rooms was on fire at t, and 0 otherwise.
+Finally, assume that at the first time instant, t = 1, we have absolutely no information (in a probabilistic sense) about which room(s) is(are) on fire.
+
+
 The modeled Bayesian Network has several layers. Each one of this layers corresponds to a time instant in which a measurement of one or more sensors was taken. From now on the notation n:NAME will be used to reference a net's node where the room or sensor with name NAME that is responsible for generating said node in the time instant n.
 
 The first layer contains the inicial conditions of each room. Since there is no information about them, it is considered that all the rooms have equal probability of being, or not, on fire ( P(0:Ri)=0.5 ).
