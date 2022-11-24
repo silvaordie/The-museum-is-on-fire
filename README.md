@@ -9,6 +9,8 @@ if room ri ∈ R is on fire at time step t, it will continue on fire at t + 1;
 or else , it will catch fire with probability P at time step t + 1 when any of the adjacent rooms was on fire at t, and 0 otherwise.
 Finally, assume that at the first time instant, t = 1, we have absolutely no information (in a probabilistic sense) about which room(s) is(are) on fire.
 
+The objective of this project is to determine the room that is most probable to be on fire at time step T, as well as the probability value, given a set of measurements in the form (t, s, z) where t ∈ T is the time step, s ∈ S is the sensor, and z ∈ {T rue, F alse} is a boolean representing whether the sensor detected a fire or not. The problem should be modeled using a Bayesian network, and solved using the variable elimination algorithm for probabilistic inference.
+
 
 The modeled Bayesian Network has several layers. Each one of this layers corresponds to a time instant in which a measurement of one or more sensors was taken. From now on the notation n:NAME will be used to reference a net's node where the room or sensor with name NAME that is responsible for generating said node in the time instant n.
 
